@@ -22,10 +22,8 @@ public class BestBuySearchPage {
     WebDriver driver=new ChromeDriver();
 //to perform Scroll on application using Selenium
 
-JavascriptExecutor js = (JavascriptExecutor) driver;
 
     private static By searchInput= By.xpath("//*[@id='gh-search-input']");
-    private static By searchButton=By.xpath("//*[@id='shop-header-83581784']/div/div[1]/header/div[1]/div/div[1]/div/form/input[2]");
     private static By iphone13ProMax=By.xpath("//a[text()='Apple - Pre-Owned iPhone 13 Pro 5G 128GB (Unlocked) - Graphite']");
 
     private static By iphone13Model=By.xpath("//span[text()='A2483-GRY']");
@@ -61,7 +59,7 @@ JavascriptExecutor js = (JavascriptExecutor) driver;
     public void add_to_the_cart_the_specific_iphone_mode(String specificPhone) {
           By specifiedPhone=By.xpath("//a[text()='"+specificPhone+"']");
         driver.findElement(specifiedPhone).click();
-        //scroll closer to the elemenet
+        //scroll closer to the element
         WebElement scrollToAddToCart=driver.findElement(By.xpath("//strong[text()='Get it tomorrow']"));
         Actions actions=new Actions(driver);
 
